@@ -1,0 +1,176 @@
+@charset "UTF-8";
+/* common */
+* {
+    margin: 0;
+    padding: 0;
+}
+html,body {
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+	-webkit-font-smoothing: antialiased;
+}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {
+	display: block;
+}
+img {
+    max-width: 100%;
+    height: auto;
+    width: auto9; /* ie8 */
+    vertical-align: middle;
+    border: 0;
+    outline: 0;
+}
+div { word-break:break-all; }
+.video embed,.video object,.video iframe {
+	width: 100%;
+	height: auto;
+}
+
+body {
+    font: 100%/1.5em Microsoft Yahei;
+}
+ul {
+    height: auto;
+    list-style-type: none;
+    width: 100%;
+}
+input,button,label {
+	outline: none;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	-webkit-tap-highlight-color: transparent; /* For some Androids */
+	text-indent: 0;
+	vertical-align: middle;
+}
+button,label {
+	border: 0;
+	cursor: pointer;
+}
+
+button::-moz-focus-inner, input[type="reset"]::-moz-focus-inner, input[type="button"]::-moz-focus-inner, input[type="submit"]::-moz-focus-inner, input[type="file"] > input[type="button"]::-moz-focus-inner { border:none; padding:0; margin:0;outline:none; }
+
+i,em { font-style:normal; }
+
+a {
+    color: #6C6C6C;
+    cursor: pointer;
+    text-decoration: none;
+}
+a:link {
+    color: #6C6C6C;
+    text-decoration: none;
+}
+a:hover {
+    color: red;
+    text-decoration: none;
+}
+
+/* color */
+.color-red { color:#FF0000; }
+.color-gray { color:#565656; }
+.color-blue { color:#2BBCF1; }
+.color-green { color:#45B32E; }
+.color-white { color:#FFF; }
+
+/* font-size */
+.size-12 { font-size:12px; }
+.size-14 { font-size:14px; }
+.size-16 { font-size:16px; }
+.size-18 { font-size:18px; }
+
+/* text-align */
+.text-left {
+	text-align: left;
+}
+.text-center {
+	text-align: center;
+}
+.text-right {
+	text-align: right;
+}
+
+/* letter */
+.letter-spacing-8 {
+	letter-spacing: 8px;
+}
+
+/* float */
+.left {
+	float: left;
+}
+.right {
+	float: right;
+}
+.clear {
+	clear: both;
+}
+
+/* relative */
+.relative {
+	position: relative;
+}
+
+/* display */
+.display {
+	display: block;
+}
+
+/* padding-common */
+.padding-clear {
+	padding: 0;
+}
+.padding-top-5 {
+	padding: 5px 0 0;
+}
+.padding-top-10 {
+	padding: 10px 0 0;
+}
+.padding-top-20 {
+	padding: 20px 0 0;
+}
+
+/* margin-common */
+.margin-top-10 {
+	margin: 10px 0 0;
+}
+.margin-top-15 {
+	margin: 15px 0 0;
+}
+.margin-top-20 {
+	margin: 20px 0 0;
+}
+.margin-top-30 {
+	margin-top: 30px;
+}
+.margin-right-10 {
+	margin: 0 10px 0 0;
+}
+.margin-right-15 {
+	margin: 0 15px 0 0;
+}
+.margin-right-20 {
+	margin: 0 20px 0 0;
+}
+.margin-bottom-15 {
+	margin: 0 0 15px;
+}
+.margin-bottom-30 {
+	margin-bottom: 30px;
+}
+.margin-tb-10 {
+	margin: 10px 0;
+}
+.margin-tb-20 {
+	margin: 20px 0;
+}
+
+.oneRow {
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;	
+}
+
+/*清楚浮动*/
+.no_float { float: none !important;}
+
+/*隐藏*/
+.hide { display: none;}

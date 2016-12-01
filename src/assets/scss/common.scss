@@ -1,0 +1,83 @@
+@charset "UTF-8";
+//set default 
+@import './default.scss';
+// common
+.icon {
+	display: inline-block;
+	*display: inline;
+	zoom: 1;
+}
+html, body {
+	font-size: $defaultFontSize;
+}
+
+/*320 = 20px ;360 = 22.5px;  375 = 23.4375px ;384 = 24px; 400 = 25px;  414 = 25.875px; 480 = 30px;768px = 48px; 600 = 37.5px;  800 = 50px; 1024 = 64px  */
+
+@media (max-width: 767px){
+    html,body { font-size: 30px;}
+}
+@media (max-width: 479px){
+    html,body { font-size: 25.8px;}
+}
+@media (max-width: 413px){
+    html,body { font-size: 25px;}
+}
+@media (max-width: 399px){
+    html,body { font-size: 24px;}
+}
+@media (max-width: 383px){
+    html,body { font-size: 23.4px;}
+}
+@media (max-width: 374px){
+    html,body { font-size: 22.5px;}
+}
+@media (max-width: 359px){
+    html,body { font-size: 20px;}
+}
+@media (max-width: 319px){ /*240*/
+    html,body { font-size: 15px;}
+}
+@media (max-width: 239px){ /*200*/
+    html,body { font-size: 12.5px;}
+}
+.i-user {
+	width: 1.1rem;
+	height: 1.2rem;
+	background: url(/images/user.png) no-repeat center;
+	background-size: 100%;
+}
+.i-search {
+	width: .8rem;
+	height: .925rem;
+	background: url(/images/search.png) no-repeat center;
+	background-size: 100%;
+}
+.i-voice {
+	width: .45rem;
+	height: .75rem;
+	background: url(/images/voice.png) no-repeat center;
+	background-size: 100%;
+}
+// ripple-effect
+.ripple-effect {
+	position: relative;
+	overflow: hidden;
+	transform: translate3d(0, 0, 0);
+}
+.ink {
+	display: block;
+	position: absolute;
+	border-radius: 50%;
+	transform: scale(0);
+	background-color: #ffffff;
+	opacity: 1;
+}
+.ink.animate {
+	animation: ripple .5s linear;
+}
+@keyframes ripple {
+	100% {
+		opacity: 0;
+		transform: scale(2.5);
+	}
+}
