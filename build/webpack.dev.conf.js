@@ -36,7 +36,7 @@ module.exports = merge(baseWebpackConfig, {
 })
 var pages = getEntry('./src/*.html');
 for(var pathname in pages) {
-  var script = 'module' + pathname.split('.')[1];
+  var script = 'src' + pathname.split('.')[1];
   var conf = {
     filename: pathname + '.html',
     template: pages[pathname],  //模板路径
