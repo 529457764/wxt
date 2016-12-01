@@ -11,13 +11,13 @@ $purple: #9999ff;
 $borderColor: #dddddd;
 $blueHover: #21a8d9;
 $defaultFontSize: 40px;
-.margin-x (@x: 5%) {
-	margin-left: @x;
-	margin-right: @x;
+@mixin margin-x ($x: 5%) {
+	margin-left: $x;
+	margin-right: $x;
 }
-.padding-x (@x: 5%) {
-	padding-left: @x;
-	padding-right: @x;
+@mixin padding-x ($x: 5%) {
+	padding-left: $x;
+	padding-right: $x;
 }
 .clearfix:after{
 	content: "020";
@@ -40,6 +40,6 @@ $defaultFontSize: 40px;
 .radius-50per {
 	border-radius: 50%;
 }
-.radius (@r: 50%) {
-	border-radius: @r;
+@mixin radius ($r: 50%) {
+	border-radius: $r;
 }
