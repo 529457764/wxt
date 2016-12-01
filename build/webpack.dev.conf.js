@@ -27,23 +27,23 @@ module.exports = merge(baseWebpackConfig, {
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoErrorsPlugin(),
     // https://github.com/ampedandwired/html-webpack-plugin
-    // new HtmlWebpackPlugin({
-    //   filename: 'index.html',
-    //   template: 'index.html',
-    //   inject: true
-    // })
+    new HtmlWebpackPlugin({
+      filename: 'index.html',
+      template: 'index.html',
+      inject: true
+    })
   ]
 })
-var pages = getEntry('./src/*.html');
-for(var pathname in pages) {
-  var script = 'src' + pathname.split('.')[1];
-  var conf = {
-    filename: pathname + '.html',
-    template: pages[pathname],  //模板路径
-    // chunks: [pathname, 'vendor', 'manifest'], //每个html引用的js模块
-    chunks: [script, 'vendor', 'manifest'],
-    inject: true     // js插入位置
-  };
-  // 需要生成几个html文件，就配置几个HtmlWebpackPlugin对象
-  module.exports.plugins.push(new HtmlWebpackPlugin(conf));
-}
+// var pages = getEntry('./src/*.html');
+// for(var pathname in pages) {
+//   var script = 'src' + pathname.split('.')[1];
+//   var conf = {
+//     filename: pathname + '.html',
+//     template: pages[pathname],  //模板路径
+//     // chunks: [pathname, 'vendor', 'manifest'], //每个html引用的js模块
+//     chunks: [script, 'vendor', 'manifest'],
+//     inject: true     // js插入位置
+//   };
+//   // 需要生成几个html文件，就配置几个HtmlWebpackPlugin对象
+//   module.exports.plugins.push(new HtmlWebpackPlugin(conf));
+// }

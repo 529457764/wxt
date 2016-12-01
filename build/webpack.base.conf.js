@@ -12,10 +12,10 @@ var useCssSourceMap = cssSourceMapDev || cssSourceMapProd
 var getEntry = utils.getEntry;
 var entries = getEntry('./src/module/**/*.js');
 module.exports = {
-  // entry: {
-  //   app: './src/main.js'
-  // },
-  entry: entries,
+  entry: {
+    app: './src/main.js'
+  },
+  // entry: entries,
   output: {
     path: config.build.assetsRoot,
     publicPath: process.env.NODE_ENV === 'production' ? config.build.assetsPublicPath : config.dev.assetsPublicPath,
