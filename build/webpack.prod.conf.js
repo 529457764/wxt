@@ -98,35 +98,5 @@ if (config.build.productionGzip) {
     })
   )
 }
-if (config.build.productionGzip) {
-  var CompressionWebpackPlugin = require('compression-webpack-plugin')
 
-  webpackConfig.plugins.push(
-    new CompressionWebpackPlugin({
-      asset: '[path].gz[query]',
-      algorithm: 'gzip',
-      test: new RegExp(
-        '\\.(' +
-        config.build.productionGzipExtensions.join('|') +
-        ')$'
-      ),
-      threshold: 10240,
-      minRatio: 0.8
-    })
-  )
-}
-// var pages = utils.getEntry('./src/*.html');
-
-// for (var pathname in pages) {
-//   // 配置生成的html文件，定义路径等
-//   var script = 'src' + pathname.split('.')[1];
-//   var conf = {
-//     filename: pathname + '.html',
-//     template: pages[pathname], // 模板路径
-//     chunks: [script, 'vendor', 'manifest'], // 每个html引用的js模块
-//     inject: true,              // js插入位置
-//   };
-//   // 需要生成几个html文件，就配置几个HtmlWebpackPlugin对象
-//   webpackConfig.plugins.push(new HtmlWebpackPlugin(conf));
-// }
 module.exports = webpackConfig

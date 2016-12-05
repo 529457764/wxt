@@ -1,10 +1,15 @@
+import Vue from 'vue';
+import VueRouter from 'vue-router';
 import common from '../../assets/script/common.js';
 import Swiper from 'swiper';
 import $ from 'jquery';
+Vue.use(VueRouter);
 export default {
   name: 'index',
   data() {
-    return {}
+    return {
+      photographClicked: false
+    }
   },
   created: function() {
     common.init();
@@ -28,13 +33,28 @@ export default {
      */
     takePhoto(evnet) {
       event.stopPropagation();
-      const target = event.currentTarget;
-      $(target).addClass('active');
+      const _this = this;
+      _this.photographClicked = true;
       setTimeout(function() {
-        if($(target).hasClass('active')) {
-          $(target).removeClass('active');
-        }
+        _this.photographClicked = false;
       }, 1000);
+      $.ajax({
+        url: '/static/data/test.json',
+        data: {name: 1},
+        success: (data, status)=> {
+          console.log("成功",data);
+        },
+        error: (data, status)=> {
+          console.log("失败",data);
+        }
+      })
+    },
+    /**
+     * 3.跳转页面
+     * @param url
+     */
+    goPage(url) {
+      this.$router.push(url);
     }
   }
 }

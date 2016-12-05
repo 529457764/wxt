@@ -1,0 +1,94 @@
+@import './default.scss';
+// back-top
+.back-top {
+	width: 100%;
+	height: 1.5rem;
+	line-height: 1.5rem;
+	font-size: .8rem;
+	text-align: center;
+	color: $white;
+	background-color: $green;
+	position: relative;
+	.iconfont {
+		position: absolute;
+		left: 2%;
+		color: $white;
+		font-size: .7rem;
+	}
+}
+// hk-list
+.hk-list {
+	width: 100%;
+	padding: 0 2%;
+	box-sizing: border-box;
+	margin-top: .5rem;
+	.hk-item {
+		width: 100%;
+		height: 5rem;
+		margin-bottom: .5rem;
+		display: flex;
+	}
+	.hk-left {
+		width: 20%;
+		height: 5rem;
+		line-height: 5rem;
+		text-align: center;
+		background-color: #2E94B9;
+		@include radius(5px);
+		margin-right: 2%;
+		.iconfont {
+			font-size: 2rem;
+			color: $white;
+		}
+	}
+	.hk-right {
+		width: 78%;
+		box-sizing: border-box;
+		padding: 2%;
+		@include radius(5px);
+		height: 5rem;
+		font-size: .7rem;
+		line-height: 1rem;
+		background-color: #FFFDC1;
+		.title {
+			margin-bottom: .5rem;
+		}
+		.info {
+			font-size: .6rem;
+		}
+	}
+}
+// detail
+.detail-wrap {
+	.hk-detail {
+		width: 90%;
+		padding: 2%;
+		margin: .5rem auto;
+		background-color: #F9F296;
+		@include radius(5px);
+		font-size: .7rem;
+		color: red;
+		line-height: 1rem;
+		animation: move-up 1s;
+	}
+	.hk-title {
+		font-size: .8rem;
+		color: $white;
+		background-color: $blue;
+		box-sizing: border-box;
+		padding: 0 2%;
+		margin-bottom: .5rem;
+		text-align: center;
+	}
+}
+
+@keyframes move-up {
+	from {
+		opacity: 0;
+		transform: translateY(5rem);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}

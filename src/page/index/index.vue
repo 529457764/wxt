@@ -2,7 +2,7 @@
   <div>
     <header class="header">
       问习题
-      <i class="icon i-user"></i>
+      <i class="icon i-user" @click="goPage('/test/list')"></i>
     </header>
     <!-- search end -->
     <section class="main">
@@ -17,7 +17,7 @@
       <!-- search end -->
       <!-- photograph start -->
       <div class="photograph-row">
-        <a class="photograph" @click="takePhoto($event)">
+        <a class="photograph" :class="{active: photographClicked}" @click="takePhoto($event)">
           <img src="/static/images/photograph.png" alt="拍照">
           <div class="circle circle1"></div>
           <div class="circle circle2"></div>
@@ -74,8 +74,8 @@
     </footer>
   </div>
 </template>
-<style lang="scss">
-  @import '../../assets/scss/index.scss';
+<style rel="stylesheet/scss" lang="scss">
   @import '../../../node_modules/swiper/dist/css/swiper.min.css';
+  @import '../../assets/scss/index.scss';
 </style>
 <script type="text/javascript" src="./index.js"></script>
